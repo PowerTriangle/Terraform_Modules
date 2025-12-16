@@ -1,0 +1,15 @@
+---
+repos:
+  - repo: git@github.com:edfenergy/eit-devops-pre-commit-terraform.git
+    rev: 0.1.0
+    hooks:
+      - id: terraform_fmt
+      - id: terraform_docs
+      - id: terraform_tflint
+  - repo: git@github.com:edfenergy/eit-devops-pre-commit-generic.git
+    rev: 0.1.3
+    hooks:
+      - id: detect-private-key
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: remove-crlf
